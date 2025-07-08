@@ -39,13 +39,15 @@ const HomeScreen = ({ navigation }: Props) => {
               onPress={() =>
                 navigation.navigate("Profile", {
                   id: item.id,
-                  ClassName: item.ClassName,
-                  ProfName: item.ProfName,
+                  ClassName: item.className,
+                  ProfName: item.profName,
+                  Description :item.description,
+                  files:item.files,
                 })
               }
             >
-              <Text style={styles.buttonText}>{item.ClassName}</Text>
-              <Text style={styles.buttonText}>{item.ProfName}</Text>
+              <Text style={styles.buttonText}>{item.className}</Text>
+              <Text style={styles.buttonText}>{item.profName}</Text>
               <Text style={styles.buttonDetailText}>조회수</Text>
             </TouchableOpacity>
           </View>

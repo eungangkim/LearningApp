@@ -1,32 +1,26 @@
-/*
-import React from 'react';
-import { View, Button, Text } from 'react-native';
-import DocumentPicker from 'react-native-document-picker';
+import { pick, types } from '@react-native-documents/picker';
+import { Text, TouchableOpacity } from 'react-native';
 
-const FilePicker = () => {
-  const handleFilePick = async () => {
+type FilePickerProps = {
+  onFilePicked: (file: { name: string; uri: string }) => void;
+};
+
+const FilePicker = ({ onFilePicked }: FilePickerProps) => {
+  const handlePick = async () => {
     try {
-      const res = await DocumentPicker.pick({
-        type: [DocumentPicker.types.allFiles], // PDF, XLSX, HWP 등 포함
-      });
-      console.log('파일 이름:', res[0].name);
-      console.log('파일 타입:', res[0].type);
-      console.log('파일 URI:', res[0].uri);
+      const [file] = await pick({ type: [types.allFiles] });
+      console.log(file.name, file.uri);
+      onFilePicked({ name: file.name!, uri: file.uri }); // ✅ 부모에게 전달
     } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        console.log('사용자가 취소함');
-      } else {
-        console.error('오류 발생:', err);
-      }
+      console.error(err);
     }
   };
 
   return (
-    <View>
-      <Button title="파일 선택" onPress={handleFilePick} />
-    </View>
+    <TouchableOpacity onPress={handlePick} style={{ padding: 10, backgroundColor: '#ccc' }}>
+      <Text>파일 선택</Text>
+    </TouchableOpacity>
   );
 };
 
 export default FilePicker;
-*/
