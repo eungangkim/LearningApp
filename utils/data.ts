@@ -7,11 +7,19 @@ export function profile(
 ) {
   return { id, className, profName, description, files };
 }
-
+/*
+실제 클라우드 서버에 있는 데이터라면?
+🔸 Firebase Storage:
+https://firebasestorage.googleapis.com/v0/b/YOUR_PROJECT.appspot.com/o/파일명.pdf?alt=media&token=인증토큰
+🔸 AWS S3:
+https://your-bucket.s3.amazonaws.com/파일명.pdf
+🔸 Google Drive (공유된 파일):
+https://drive.google.com/uc?id=FILE_ID&export=download
+*/
 export const list = [
   profile(1, "자료구조", "조행래", "스택과 큐를 다룹니다.", [
-    { name: "stack.pdf", uri: "files/stack.pdf" },
-    { name: "queue.pdf", uri: "files/queue.pdf" },
+    { name: "stack.jpg", uri: "https://i.pinimg.com/736x/ff/bc/d9/ffbcd9d83dce6db87ae78db8ce034ca5.jpg" },//
+    { name: "queue.hwd", uri: "files/2cbdb989296bac265ffad95d04a1b6c7.jpg" },
   ]),
   profile(2, "데이터 통신", "박영덕", "OSI 7계층 개요", [
     { name: "osi.pdf", uri: "files/osi.pdf" },

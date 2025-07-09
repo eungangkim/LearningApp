@@ -45,6 +45,25 @@ export const profile = StyleSheet.create({
   detailButton: {
     backgroundColor: "red",
   },
+  fileBox: {
+    maxHeight: 100, // 고정된 높이로 작은 창 구성
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
+    backgroundColor: "#f9f9f9",
+  },
+  fileItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  uri: {
+    marginLeft:10,
+    fontSize: 12,
+    color: "gray",
+  },
 });
 
 export const post = StyleSheet.create({
