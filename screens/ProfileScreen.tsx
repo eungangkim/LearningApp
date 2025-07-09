@@ -1,10 +1,22 @@
+/*
+게시글 화면
+*/
 import React, { useState } from "react";
-import { View, Text, Button, TouchableOpacity, ScrollView, Linking } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  TouchableOpacity,
+  ScrollView,
+  Linking,
+} from "react-native";
 import { useNavigation, RouteProp } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../types/navigation";
 import { styles, profile } from "../styles/styles";
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+import FileViewer from "react-native-file-viewer";
+
 type ProfileScreenRouteProp = RouteProp<RootStackParamList, "Profile">;
 
 type Props = {
@@ -30,9 +42,29 @@ const ProfileScreen = ({ route }: Props) => {
         <View style={profile.fileBox}>
           <ScrollView>
             {files.map((file, index) => (
+              /*파일 뷰어 방식 *작동위해 환경 설정 필요* */
               <View key={index} style={profile.fileItem}>
                 {getFileIcon(file.name)}
-                <TouchableOpacity onPress={() => Linking.openURL(file.uri)}>
+                <TouchableOpacity
+                  onPress={() => {
+                    FileViewer.open(file.uri)
+                      .then(() => console.log("열림"))
+                      .catch((err) => console.log("오류입니다:", err));
+                  }}
+                >
+                  <Text
+                    style={[
+                      profile.text,
+                      { color: "blue", textDecorationLine: "underline" },
+                    ]}
+                  >
+                    • {file.name}
+                  </Text>
+                </TouchableOpacity>
+                {/*Linking 방식*/}
+                <TouchableOpacity
+                  onPress={() => Linking.openURL(file.uri)}
+                >
                   <Text
                     style={[
                       profile.text,
@@ -87,3 +119,5 @@ const getFileIcon = (filename: string) => {
   }
 };
 export default ProfileScreen;
+/*
+ */

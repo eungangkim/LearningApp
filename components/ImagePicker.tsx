@@ -24,7 +24,7 @@ const ImagePicker = () => {
 
   return (
     <View>
-      <Button title="파일 선택" onPress={handleSelectFile} />
+      <Button title="이미지 선택" onPress={handleSelectFile} />
     </View>
   );
 };

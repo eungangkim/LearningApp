@@ -1,3 +1,13 @@
+/*
+profile -> 게시글에 담겨있는 데이터(*개인정보가 아님*)
+
+추가해야할 데이터{
+  -제목
+  -key id(과목번호와 통일 가능하진 검토해야함. 통일 가능하다면 기존 id를 사용)
+  -
+  -
+}
+*/
 export function profile(
   id: number,
   className: string,
