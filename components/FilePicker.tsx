@@ -1,6 +1,6 @@
 import { pick, types } from '@react-native-documents/picker';
 import { Text, TouchableOpacity } from 'react-native';
-
+import {post} from '../styles/styles';
 type FilePickerProps = {
   onFilePicked: (file: { name: string; uri: string }) => void;
 };
@@ -17,7 +17,7 @@ const FilePicker = ({ onFilePicked }: FilePickerProps) => {
   };
 
   return (
-    <TouchableOpacity onPress={handlePick} style={{ padding: 10, backgroundColor: '#ccc' }}>
+    <TouchableOpacity onPress={handlePick} style={post.filePicker}>
       <Text>파일 선택</Text>
     </TouchableOpacity>
   );

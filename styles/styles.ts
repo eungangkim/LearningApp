@@ -1,11 +1,12 @@
 import { StyleSheet, Touchable } from "react-native";
+import FilePicker from "../components/FilePicker";
 
 export const styles = StyleSheet.create({
   container: {
     width: 400,
     borderWidth: 2,
     borderColor: "black",
-    justifyContent: "flex-end",
+    justifyContent: "flex-start",
     alignItems: "flex-start",
     margin: 5,
   },
@@ -69,6 +70,7 @@ export const profile = StyleSheet.create({
 export const post = StyleSheet.create({
   container: {
     borderColor: "rgba(6, 93, 9, 0.45)",
+    height:"85%",
   },
   itemContainer: {
     flexDirection: "row",
@@ -77,9 +79,12 @@ export const post = StyleSheet.create({
     marginBottom: 5,
   },
   touchable: {
-    backgroundColor: "#rgba(4, 24, 47, 0.49)",
-    width: "30%",
     alignItems: "center",
+    borderColor:'black',
+    borderWidth:1,
+    padding: 10,
+    margin:5,
+    backgroundColor: '#ccc' ,
   },
   text: {
     width: 69,
@@ -100,8 +105,21 @@ export const post = StyleSheet.create({
     marginVertical: 8,
   },
   descriptionInput: {
-    height: 300,
+    height: "740%",
     textAlignVertical: "top",
-    marginBottom: 10,
+    marginBottom: 12.5,
+  },
+  filePicker:{
+    borderColor:'black',
+    borderWidth:1,
+    padding: 10,
+    margin:5,
+    backgroundColor: '#ccc' ,
+    alignItems:"center",
+  },
+  filePickerText:{
+    borderColor:'black',
+    borderWidth:4,
+    textAlign:'center',
   },
 });

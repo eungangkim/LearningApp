@@ -1,3 +1,6 @@
+/*
+홈 화면
+*/
 import React from "react";
 import { View, Text, TouchableOpacity, Button, Image, FlatList } from "react-native";
 import { styles } from "../styles/styles";

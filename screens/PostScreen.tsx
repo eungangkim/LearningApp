@@ -66,6 +66,7 @@ const PostScreen = () => {
             onChangeText={onChangeClassName}
             value={ClassName}
             placeholder="예시 : 자료구조"
+            focusable
             style={post.textInput}
           />
         </View>
@@ -102,7 +103,7 @@ const PostScreen = () => {
         </View>
       </View>
       <View>
-        <ImagePicker />
+        {/*<ImagePicker />*/}
         <FilePicker
           onFilePicked={(file) => {
             setFile((prev) => [...prev, file]); // ✅ 파일 추가

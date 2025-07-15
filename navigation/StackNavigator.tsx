@@ -5,7 +5,8 @@ import ProfileScreen from "../screens/ProfileScreen.tsx";
 import DetailScreen from "../screens/DetailScreen.tsx";
 import { RootStackParamList } from "../types/navigation";
 import PostScreen from "../screens/PostScreen.tsx";
-
+import { SearchScreen } from "../screens/SearchScreen.tsx";
+import { PersonalScreen } from "../screens/PersonalScreen.tsx";
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const StackNavigator = () => (
@@ -18,6 +19,8 @@ const StackNavigator = () => (
     />
     <Stack.Screen name="Detail" component={DetailScreen} />
     <Stack.Screen name="Post" component={PostScreen} />
+    <Stack.Screen name="Search" component={SearchScreen} />
+    <Stack.Screen name="Personal" component={PersonalScreen} />
   </Stack.Navigator>
 );
 
