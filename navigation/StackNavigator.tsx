@@ -7,6 +7,9 @@ import { RootStackParamList } from "../types/navigation";
 import PostScreen from "../screens/PostScreen.tsx";
 import { SearchScreen } from "../screens/SearchScreen.tsx";
 import { PersonalScreen } from "../screens/PersonalScreen.tsx";
+import FilePreviewScreen from "../screens/FilePreviewScreen.tsx";
+import TestScreen from "../screens/EditProfile.tsx";
+
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const StackNavigator = () => (
@@ -21,6 +24,8 @@ const StackNavigator = () => (
     <Stack.Screen name="Post" component={PostScreen} />
     <Stack.Screen name="Search" component={SearchScreen} />
     <Stack.Screen name="Personal" component={PersonalScreen} />
+    <Stack.Screen name="FilePreview" component={FilePreviewScreen} />
+    <Stack.Screen name="EditProfile" component={TestScreen} />
   </Stack.Navigator>
 );
 

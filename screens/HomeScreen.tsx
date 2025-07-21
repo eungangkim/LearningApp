@@ -17,11 +17,11 @@ const HomeScreen = ({ navigation }: Props) => {
     <View style={{flex:1}}>
       <View style={{ flex: 0.1, flexDirection: "row" }}>
         {/* 왼쪽 빈 공간 (80%) */}
-        <View style={{ flex: 8 }} />
+        <View style={[styles.borderbox,{flex:0.8}]} />
 
         {/* 오른쪽 버튼 공간 (20%) */}
         <View
-          style={{ flex: 2, justifyContent: "center", alignItems: "center" }}
+          style={{ flex: 0.2, justifyContent: "center", alignItems: "center" }}
         >
           <TouchableOpacity onPress={() => navigation.navigate("Post")}>
             <Image

@@ -19,13 +19,13 @@ const Footer = () => {
         onPress={() => navigation.navigate("Search")}
         style={footer.container}
       >
-        <Text></Text>
+        <Text>Search</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => navigation.navigate("Personal")}
         style={footer.container}
       >
-        <Text></Text>
+        <Text>Personal</Text>
       </TouchableOpacity>
     </View>
   );

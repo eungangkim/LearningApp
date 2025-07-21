@@ -32,11 +32,11 @@ export const list = [
     { name: "queue.hwd", uri: "files/2cbdb989296bac265ffad95d04a1b6c7.jpg" },
   ]),
   profile(2, "데이터 통신", "박영덕", "OSI 7계층 개요", [
-    { name: "osi.pdf", uri: "files/osi.pdf" },
+    { name: "osi.pdf", uri: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
   ]),
   profile(3, "자료구조", "조행래", "리스트 구조 복습"),
   profile(4, "데이터 통신", "박영덕", "TCP와 UDP 비교", [
-    { name: "tcp-vs-udp.png", uri: "files/tcp-vs-udp.png" },
+    { name: "tcp-vs-udp.png", uri: "https://www.yu.ac.kr/_attach/f/view.jsp?attach_no=355056" },
   ]),
   profile(5, "자료구조", "조행래", "트리 구조 예제", [
     { name: "tree-example.docx", uri: "files/tree-example.docx" },

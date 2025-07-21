@@ -2,6 +2,10 @@ import { StyleSheet, Touchable } from "react-native";
 import FilePicker from "../components/FilePicker";
 
 export const styles = StyleSheet.create({
+  borderbox:{
+    borderWidth:1,
+    borderColor:"black",
+  },
   container: {
     width: 400,
     borderWidth: 2,

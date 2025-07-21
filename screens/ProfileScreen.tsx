@@ -16,6 +16,7 @@ import { RootStackParamList } from "../types/navigation";
 import { styles, profile } from "../styles/styles";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import FileViewer from "react-native-file-viewer";
+import FilePreviewScreen from "./FilePreviewScreen";
 
 type ProfileScreenRouteProp = RouteProp<RootStackParamList, "Profile">;
 
@@ -58,20 +59,24 @@ const ProfileScreen = ({ route }: Props) => {
                       { color: "blue", textDecorationLine: "underline" },
                     ]}
                   >
-                    • {file.name}
+                    • {file.name + "  파일 뷰어"}
                   </Text>
                 </TouchableOpacity>
                 {/*Linking 방식*/}
                 <TouchableOpacity
+                
                   onPress={() => Linking.openURL(file.uri)}
-                >
+                /*
+                  onPress={() => navigation.navigate("FilePreview", { file })}
+                    */
+                  >
                   <Text
                     style={[
                       profile.text,
                       { color: "blue", textDecorationLine: "underline" },
                     ]}
                   >
-                    • {file.name}
+                    • {file.name + "  링킹"}
                   </Text>
                 </TouchableOpacity>
                 <Text style={profile.uri}>{file.uri}</Text>
